@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    Options -Multiviews
+    RewriteEngine on
+    RewriteBase /POTHPIYASA/public
+    RewriteCond %{REQUEST_FILENAME} 1-d
+    RewriteCond %{REQUEST_FILENAME} 1-f
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
